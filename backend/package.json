@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx nodemon index.js"
+    "dev": "npx nodemon index.js",
+    "build": "cd backend/frontend && npm install && npm run build && cp -r dist/* ../frontend/"
   },
   "keywords": [],
   "author": "",
