@@ -13,7 +13,7 @@ export const Dashboard = () => {
   async function getResponseCurrentUserData() {
     try {
       const response = await axios.get(
-        "http://localhost:3000/api/v1/user/getCurrentUser",
+        `${window.location.origin}/api/v1/user/getCurrentUser`,
         {
           headers: {
             Authorization: "Bearer " + token, // Ensure a space between "Bearer" and the token
@@ -38,7 +38,7 @@ export const Dashboard = () => {
   async function getBalance() {
     try {
       const response = await axios.get(
-        "http://localhost:3000/api/v1/account/balance",
+        `${window.location.origin}/api/v1/account/balance`,
         {
           headers: {
             Authorization: "Bearer " + token, // Ensure a space between "Bearer" and the token

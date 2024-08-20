@@ -11,7 +11,7 @@ export const Users = ({ responseData }) => {
   async function getUsers() {
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/user/bulk",
+        `${window.location.origin}/api/v1/user/bulk`,
         {
           filter: filterInputValue, // Search filter input
           currentUserId: responseData?.user?._id, // Your current user's ID
