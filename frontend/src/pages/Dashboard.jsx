@@ -63,7 +63,8 @@ export const Dashboard = () => {
       <Appbar responseData={responseData} />
       <div className="m-8">
         <Balance value={balance}></Balance>
-        <Users responseData={responseData}></Users>
+        {responseData && <Users responseData={responseData}></Users>}
+        
       </div>
     </div>
   );

@@ -105,6 +105,8 @@ router.get("/getCurrentUser", authMiddleware, async (req, res) => {
 // Backend Route to fetch users excluding the current user
 router.post("/bulk", async (req, res) => {
   const { filter, currentUserId } = req.body;
+  console.log("filter"+filter)
+  console.log("currentUserId"+currentUserId)
 
   try {
     

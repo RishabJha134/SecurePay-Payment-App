@@ -10,13 +10,6 @@ export const Users = ({ responseData }) => {
   // Function to fetch the filtered list of users
   async function getUsers() {
     try {
-      // Ensure currentUserId is correctly passed
-
-      // if (!responseData?.user?._id) {
-      //   console.error("Current User ID is missing");
-      //   return;
-      // }
-
       const response = await axios.post(
         "http://localhost:3000/api/v1/user/bulk",
         {
