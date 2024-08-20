@@ -1,2 +1,2 @@
-JWT_SECRET = "12345";
+JWT_SECRET = process.env.JWT_SECRET_KEY;
 module.exports =  JWT_SECRET ;
