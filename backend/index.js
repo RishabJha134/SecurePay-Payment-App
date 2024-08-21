@@ -6,7 +6,11 @@ const app = express();
 const path = require("path");
 const PORT = process.env.PORT || 8000;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.CLIENT_URL,
+  })
+);
 app.use(express.json());
 
 // routing:-
