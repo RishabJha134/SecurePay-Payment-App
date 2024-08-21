@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { Appbar } from "../components/AppBar";
+import { BaseUrl } from "../BaseUrl";
 
 export const SendMoney = () => {
   const [searchParams] = useSearchParams();
@@ -14,7 +15,7 @@ export const SendMoney = () => {
     console.log("clicked amount");
     try {
       const response = await axios.post(
-        `${window.location.origin}/api/v1/account/transfer`,
+        `${BaseUrl}/api/v1/account/transfer`,
         {
           to: id,
           amount,

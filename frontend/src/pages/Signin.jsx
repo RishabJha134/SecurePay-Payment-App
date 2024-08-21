@@ -6,6 +6,7 @@ import { InputBox } from "../components/InputBox";
 import { SubHeading } from "../components/SubHeading";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { BaseUrl } from "../BaseUrl";
 
 export const Signin = () => {
   const [username, setUsername] = useState("");
@@ -71,7 +72,7 @@ export const Signin = () => {
               onClick={async () => {
                 try {
                   const response = await axios.post(
-                    `${window.location.origin}/api/v1/user/signin`,
+                    `${BaseUrl}/api/v1/user/signin`,
                     {
                       username: username,
                       password: password,

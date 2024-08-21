@@ -3,6 +3,8 @@ import { Appbar } from "../components/AppBar";
 import { Balance } from "./Balance";
 import { Users } from "../components/Users";
 import axios from "axios";
+import { BaseUrl } from "../BaseUrl";
+
 
 export const Dashboard = () => {
   const token = localStorage.getItem("token");
@@ -13,7 +15,7 @@ export const Dashboard = () => {
   async function getResponseCurrentUserData() {
     try {
       const response = await axios.get(
-        `${window.location.origin}/api/v1/user/getCurrentUser`,
+        `${BaseUrl}/api/v1/user/getCurrentUser`,
         {
           headers: {
             Authorization: "Bearer " + token, // Ensure a space between "Bearer" and the token
@@ -38,7 +40,7 @@ export const Dashboard = () => {
   async function getBalance() {
     try {
       const response = await axios.get(
-        `${window.location.origin}/api/v1/account/balance`,
+        `${BaseUrl}/api/v1/account/balance`,
         {
           headers: {
             Authorization: "Bearer " + token, // Ensure a space between "Bearer" and the token

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Button } from "./Button";
 import { useNavigate } from "react-router-dom";
+import { BaseUrl } from "../BaseUrl";
 
 export const Users = ({ responseData }) => {
   const [users, setUsers] = useState([]);
@@ -11,7 +12,7 @@ export const Users = ({ responseData }) => {
   async function getUsers() {
     try {
       const response = await axios.post(
-        `${window.location.origin}/api/v1/user/bulk`,
+        `${BaseUrl}/api/v1/user/bulk`,
         {
           filter: filterInputValue, // Search filter input
           currentUserId: responseData?.user?._id, // Your current user's ID
