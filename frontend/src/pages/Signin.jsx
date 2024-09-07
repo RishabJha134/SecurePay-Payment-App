@@ -58,12 +58,13 @@ export const Signin = () => {
               label={"Email"}
               className="border-b-2 border-[#1E40AF] focus:border-[#6D28D9]"
             />
-            <InputBox
+
+            <input
               onChange={passwordHandler}
-              placeholder="Password"
               label={"Password"}
+              placeholder="Password"
+              className="w-full px-2 py-1 border rounded border-slate-200"
               type="password"
-              className="border-b-2 border-[#1E40AF] focus:border-[#6D28D9]"
             />
           </div>
 

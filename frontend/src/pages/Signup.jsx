@@ -33,8 +33,14 @@ export const Signup = () => {
     <div className="bg-gradient-to-br from-[#1E40AF] to-[#6D28D9] h-screen flex justify-center items-center">
       <div className="flex flex-col justify-center">
         <div className="rounded-xl shadow-2xl bg-white w-96 text-center p-8 transition-transform duration-500 hover:scale-105">
-          <Heading label={"Create Your Account"} className="text-[#1E40AF] font-bold text-2xl" />
-          <SubHeading label={"Join us and make payments with ease"} className="text-[#D1D5DB] mt-2" />
+          <Heading
+            label={"Create Your Account"}
+            className="text-[#1E40AF] font-bold text-2xl"
+          />
+          <SubHeading
+            label={"Join us and make payments with ease"}
+            className="text-[#D1D5DB] mt-2"
+          />
 
           <div className="mt-6">
             <InputBox
@@ -55,13 +61,18 @@ export const Signup = () => {
               label={"Email"}
               className="border-b-2 border-[#1E40AF] focus:border-[#6D28D9]"
             />
-            <InputBox
-              onChange={passwordHandler}
-              placeholder="Password"
-              label={"Password"}
-              type="password"
-              className="border-b-2 border-[#1E40AF] focus:border-[#6D28D9]"
-            />
+
+            <div>
+              <div className="text-sm font-medium text-left py-2">
+                {"Password"}
+              </div>
+              <input
+                onChange={passwordHandler}
+                placeholder="Password"
+                className="w-full px-2 py-1 border rounded border-slate-200"
+                type="password"
+              />
+            </div>
           </div>
 
           <div className="pt-6">
